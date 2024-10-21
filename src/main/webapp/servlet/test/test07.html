@@ -9,54 +9,54 @@
 <title>주문하기</title>
 </head>
 <body>
-	<div class="w-25 pl-5">
-		<h1>주문</h1>
-		
-		<form method="get" action="/servlet/test07">
-			<label>주소</label> <input name="address" id="address" class = "form-control" type = "text">
-			<label>결제 카드</label> <input name="credit" id="credit" class = "form-control" type = "text">
-			<label>가격</label> <input name="price" id="price" class = "form-control" type = "text">
+		<div class="w-25 pl-5">
+			<h1>주문</h1>
 			
-			<input type="submit" id="order" value="검색" class="btn mt-3 bg-primary text-white">
-		</form>	
-	</div>
+			<form method="get" action="/servlet/test07">
+				<label>주소</label> <input name="address" id="address" class = "form-control" type = "text">
+				<label>결제 카드</label> <input name="credit" id="credit" class = "form-control" type = "text">
+				<label>가격</label> <input name="price" id="price" class = "form-control" type = "text">
+				
+				<input type="submit" id="order" value="검색" class="btn mt-3 bg-primary text-white">
+			</form>	
+		</div>
+		
+		<div style="margin-top:30px;margin-left:50px;">
+			<a href="/servlet/test/test08.html">8번 문제</a>
+		</div>
 	
-	<div style="margin-top:30px;margin-left:50px;">
-		<a href="/servlet/test/test08.html">8번 문제</a>
-	</div>
-	
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
-    <script>
-    	$(document).ready(function(){
-    		$("#order").on("click", function(){
-    			let address = $("#address").val();
-    			let credit = $("#credit").val();
-    			let price = $("#price").val();
-    			
-    			if(address.length == 0){
-    				alert("주소를 입력해주세요");
-    				return false;
-    			}
-    			
-    			if(credit.length == 0){
-    				alert("결제카드를 입력해주세요");
-    				return false;
-    			}
-    			
-    			if(price.length == 0){
-    				alert("결제 금액을 입력해주세요");
-    				return false;
-    			}
-    			
-    			/* location.href = "/servlet/test07?address=" + address + "&credit=" + credit + "&price=" + price; */
-    			
-    		});
-    	});
-    	
-    </script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+	    
+	    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+	    <script>
+	    	$(document).ready(function(){
+	    		$("#order").on("click", function(){
+	    			let address = $("#address").val();
+	    			let credit = $("#credit").val();
+	    			let price = $("#price").val();
+	    			
+	    			if(address.length == 0){
+	    				alert("주소를 입력해주세요");
+	    				return false;
+	    			}
+	    			
+	    			if(credit.length == 0){
+	    				alert("결제카드를 입력해주세요");
+	    				return false;
+	    			}
+	    			
+	    			if(price.length == 0){
+	    				alert("결제 금액을 입력해주세요");
+	    				return false;
+	    			}
+	    			
+	    			/* location.href = "/servlet/test07?address=" + address + "&credit=" + credit + "&price=" + price; */
+	    			
+	    		});
+	    	});
+	    	
+	    </script>
 </body>
 </html>
