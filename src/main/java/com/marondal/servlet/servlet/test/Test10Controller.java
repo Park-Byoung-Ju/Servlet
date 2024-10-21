@@ -22,7 +22,7 @@ public class Test10Controller extends HttpServlet{
 
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
+		// 필터 사용
 //		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
 //		request.setCharacterEncoding("utf-8");
