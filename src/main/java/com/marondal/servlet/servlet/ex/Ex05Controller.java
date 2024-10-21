@@ -14,6 +14,7 @@ public class Ex05Controller extends HttpServlet{
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
+		// 필터사용
 //		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
 //		request.setCharacterEncoding("utf-8");
@@ -31,7 +32,7 @@ public class Ex05Controller extends HttpServlet{
 		out.println(""
 				+ "<html>"
 				+ "	<head>"
-				+ "		<title>ex04</title>"
+				+ "		<title>ex05</title>"
 				+ "	</head>"
 				+ ""
 				+ "	<body>");
