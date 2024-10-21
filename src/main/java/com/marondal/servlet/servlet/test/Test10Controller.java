@@ -23,9 +23,9 @@ public class Test10Controller extends HttpServlet{
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		response.setCharacterEncoding("utf-8");
+//		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
-		request.setCharacterEncoding("utf-8");
+//		request.setCharacterEncoding("utf-8");
 		
 		PrintWriter out = response.getWriter();
 		
