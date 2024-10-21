@@ -16,7 +16,7 @@ public class Test10Controller extends HttpServlet{
 	    {
 	        put("id", "hagulu");
 	        put("password", "asdf");
-	        put("name", "김인규");
+	        put("name", "박병주");
 	    }
 	};
 
