@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form method="post" action="/servlet/ex05">
+		<div style="display:flex;">
+			<div>
+				<label>이름 : </label> <input type="text" name="name">
+			</div>
+			
+			<div style="margin-left:5px;">
+				<label>생년월일 : </label> <input type="text" name="birthday">
+			</div>
+			<input style="margin-left:5px;" type="submit" value="입력">
+		</div>
+	</form>
+</body>
+</html>
+
+<!-- http://localhost:8080/servlet/ex04?name=%EB%B0%95%EB%B3%91%EC%A3%BC&birthday=19600808 -->
+<!-- URL Encoding -->
