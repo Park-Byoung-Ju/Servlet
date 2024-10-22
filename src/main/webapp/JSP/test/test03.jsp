@@ -19,6 +19,7 @@
 		Date now = new Date();
 		String formatData ="";
 		String statusText = "";
+		
 		if(status.equals("time")){
 			formatData = "hh시 mm분 ss초";
 			statusText = "현재 시간";
