@@ -16,33 +16,34 @@
 	
 	String[] length = request.getParameterValues("length");
 	
-	String result = "";
-	for(int i = 0; i < length.length; i++){
-		
-		if(length[i].equals("inch")){
-			double inch = cm / 2.54;
-			result += "<div>" + inch+ "(inch)" + "</div>";
-		}else if(length[i].equals("feet")){
-			double feet = cm / 30.48;
-			result += "<div>" + feet+ "(ft)" + "</div>";
-		}else if(length[i].equals("yard")){
-			double yard = cm / 91.44;
-			result += "<div>" + yard+ "(yd)" + "</div>";
-		}else{
-			/* meter */	
-			double meter = cm / 100;
-			result += "<div>" + meter + "(meter)" + "</div>";
-		}
-	}
+	
 %>
-	<div>
+
+	<div style="width:15%;margin:10% auto 0 auto;">
 		<h3>수치 변환</h3>
 		<div><%= cm %>cm</div>
 		
-		<hr>
+		<hr style="background-color:gray;">
 		
 		<div>
-			<%= result %>
+			<%
+			for(int i = 0; i < length.length; i++){
+				
+				if(length[i].equals("inch")){
+					double inch = cm / 2.54;
+			%>		<div> <%= inch+ "(inch)" %></div>
+			<% 	}else if(length[i].equals("feet")){
+					double feet = cm / 30.48;
+			%>		<div>  <%= feet + "(ft)" %></div>
+			<%	}else if(length[i].equals("yard")){
+					double yard = cm / 91.44;
+			%>		<div> <%= yard + "(yd)" %></div>
+			<%	}else{
+					/* meter */	
+					double meter = cm / 100;
+			%>		<div> <%= meter + "(meter)" %> </div>
+			<%	}
+			} %>
 		</div>
 		
 	</div>

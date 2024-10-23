@@ -11,7 +11,7 @@
 </head>
 <body>
 	<form class="ml-5 mt-3" method="post" action="/JSP/test/test04.jsp">
-		<h1>사칙 연산</h1>
+		<h1>사칙연산</h1>
 		<div class="d-flex col-5">
 			<input class="form-control" type="text" name="number1">
 			
