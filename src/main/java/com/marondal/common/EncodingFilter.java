@@ -1,4 +1,4 @@
-package com.marondal.servlet.servlet.common;
+package com.marondal.common;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 // 해당 필터가 거쳐갈 서블릿에 대한 path 범위
-@WebFilter("/servlet/*")
+@WebFilter("/*")
 public class EncodingFilter implements Filter{
 
 	@Override
