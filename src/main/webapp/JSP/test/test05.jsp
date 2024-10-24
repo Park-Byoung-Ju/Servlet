@@ -31,17 +31,28 @@
 				
 				if(length[i].equals("inch")){
 					double inch = cm / 2.54;
+					
 			%>		<div> <%= inch+ "(inch)" %></div>
+			
 			<% 	}else if(length[i].equals("feet")){
+				
 					double feet = cm / 30.48;
+					
 			%>		<div>  <%= feet + "(ft)" %></div>
+			
 			<%	}else if(length[i].equals("yard")){
+				
 					double yard = cm / 91.44;
+					
 			%>		<div> <%= yard + "(yd)" %></div>
+			
 			<%	}else{
+				
 					/* meter */	
 					double meter = cm / 100;
+					
 			%>		<div> <%= meter + "(meter)" %> </div>
+			
 			<%	}
 			} %>
 		</div>
