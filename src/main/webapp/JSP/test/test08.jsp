@@ -62,9 +62,9 @@
 
 	int id = Integer.parseInt(request.getParameter("id"));
 %>
-	<div style="margin:0 auto 0 auto;">
+	<div>
 		<h2 class="text-center">도서 정보</h2>
-		<div class="d-flex justify-content-center">
+		<div class="d-flex justify-content-center mt-3">
 <% 		for(Map<String, Object> bookMap : list){
 			int mapId = Integer.parseInt(bookMap.get("id").toString());
 			
@@ -81,7 +81,7 @@
 				<div>
 					<h1><%= title %></h1>
 					<div class="text-info display-2"><%= author %></div>
-					<div style="color:gray;" class="display-2"><%= publisher %></div>
+					<div style="color:gray;" class="display-3"><%= publisher %></div>
 				</div>
 <%			}
 		}

@@ -60,33 +60,34 @@
 	};
 	list.add(map);
 %>
-	<div style="margin:0 auto 0 auto;" class="w-75 text-center">
+	<div class="text-center">
 		<h2>책 목록</h2>
-		
-		<table style="margin:0 auto 0 auto;" class="table mt-3">
-			<thead>
-				<tr>
-					<th>id</th>
-					<th>표지</th>
-					<th>제목</th>
-				</tr>
-			</thead>
-			
-			<tbody>
-<%
-		for(Map<String, Object> bookMap : list){
-			int id = Integer.parseInt(bookMap.get("id").toString());
-			String img = bookMap.get("image").toString();
-			String title = bookMap.get("title").toString();
-%>		
-				<tr>
-					<td><%= id %></td>
-					<td><img style="width:200px" src="<%= img %>"></td>
-					<td><a class="display-4 text-primary" href="/JSP/test/test08.jsp?id=<%= id %>"><%= title %></a></td>
-<%		}
-%>				
-			</tbody>
-		</table>
+		<div class="d-flex justify-content-center">	
+			<table class="table w-75">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>표지</th>
+						<th>제목</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+	<%
+			for(Map<String, Object> bookMap : list){
+				int id = (int) bookMap.get("id");
+				String img = (String)bookMap.get("image");
+				String title = (String) bookMap.get("title");
+	%>		
+					<tr>
+						<td><%= id %></td>
+						<td><img style="width:200px" src="<%= img %>"></td>
+						<td><a class="display-4 text-primary" href="/JSP/test/test08.jsp?id=<%= id %>"><%= title %></a></td>
+	<%		}
+	%>				
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

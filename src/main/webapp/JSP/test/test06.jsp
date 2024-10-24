@@ -13,31 +13,33 @@
 <title>JSP 6번</title>
 </head>
 <body>
-	<div class="ml-5 mt-3 text-center w-75">
+	<div class="ml-5 mt-3 text-center">
 		<h3>장 목록</h3>
-		<table style="margin:0 auto 0 auto;" class="w-75 mt-4 table">
-			<thead>
-				<tr>
-					<th>번호</th>
-					<th>품목</th>
-				</tr>
-			</thead>
+		<div class="d-flex justify-content-center">	
+			<table class="w-75 mt-4 table">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>품목</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+			<%
+				List<String> goodsList = Arrays.asList(new String[]{ 
+				    "저지방 우유", "요플레 4개", "딸기 1팩", "삼겹살 300g", "생수 6개", "주방 세제"
+				});
 			
-			<tbody>
-		<%
-			List<String> goodsList = Arrays.asList(new String[]{ 
-			    "저지방 우유", "요플레 4개", "딸기 1팩", "삼겹살 300g", "생수 6개", "주방 세제"
-			});
-		
-			for(int i = 0; i < goodsList.size(); i++){
-		%>		<tr>
-					<td> <%= (i + 1) %> </td>
-					<td> <%= goodsList.get(i) %> </td>
-				</tr>	
-		<%	}
-		%>
-			</tbody>
-		</table>
+				for(int i = 0; i < goodsList.size(); i++){
+			%>		<tr>
+						<td> <%= (i + 1) %> </td>
+						<td> <%= goodsList.get(i) %> </td>
+					</tr>	
+			<%	}
+			%>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

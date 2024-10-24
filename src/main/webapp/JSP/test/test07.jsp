@@ -34,45 +34,46 @@
 	String menuString = request.getParameter("menu");
 	String pointString = request.getParameter("check");
 %>	
-	<div style="margin:0 auto 0 auto;" class="w-50 text-center">
+	<div class="text-center">
 		<h2>검색 결과</h2>
-		
-		<table class="table mt-3">
-			<thead>
-				<tr>
-					<th>메뉴</th>
-					<th>상호</th>
-					<th>별점</th>
-				</tr>
-			</thead>
-			
-			<tbody>
+		<div class="d-flex justify-content-center">		
+			<table class="table mt-3 w-75">
+				<thead>
+					<tr>
+						<th>메뉴</th>
+						<th>상호</th>
+						<th>별점</th>
+					</tr>
+				</thead>
+				
+				<tbody>
 <%
-			for(Map<String,Object> storeMap : list){
-				String menu = storeMap.get("menu").toString();
-				double isPoint = 0; // 평점의 기준, 초기 설정은 전체 검색
-				if(menuString.equals(menu)){
-					if(pointString != null && Character.isDigit(pointString.charAt(0))){ 
-						// 4 한 글자를 가지고있고 숫자인지 아닌지 판별
-						isPoint = 4;
+				for(Map<String,Object> storeMap : list){
+					String menu = (String)storeMap.get("menu");
+					double isPoint = 0; // 평점의 기준, 초기 설정은 전체 검색
+					if(menuString.equals(menu)){
+						if(pointString != null && Character.isDigit(pointString.charAt(0))){ 
+							// 4 한 글자를 가지고있고 숫자인지 아닌지 판별
+							isPoint = 4;
+							
+						}
+						double point = (double)storeMap.get("point");
+						String store = (String)storeMap.get("name");
 						
+						if(point > isPoint){
+							// isPoint는 4점 제외를 설정하지 않았다면 0(전체검색), 설정했다면 4(4점 이하 제외)의 값을 가지고있다
+%>						<tr>
+							<td><%= menu %></td>
+							<td><%= store %></td>
+							<td><%= point %></td>
+						</tr>						
+<%						}
 					}
-					double point = Double.parseDouble(storeMap.get("point").toString());
-					String store = storeMap.get("name").toString();
-					
-					if(point > isPoint){
-						// isPoint는 4점 제외를 설정하지 않았다면 0(전체검색), 설정했다면 4(4점 이하 제외)의 값을 가지고있다
-%>					<tr>
-						<td><%= menu %></td>
-						<td><%= store %></td>
-						<td><%= point %></td>
-					</tr>						
-<%					}
 				}
-			}
 %>			
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
