@@ -101,13 +101,7 @@
 				
 <%			// ch name category
 			for(Map<String, String> broadCastingMap : list){
-				if(category == null){
-%>					<tr>
-						<td><%= broadCastingMap.get("ch") %></td>
-						<td><%= broadCastingMap.get("name") %></td>
-						<td><%= broadCastingMap.get("category") %></td>
-					</tr>
-<%				}else if(category.equals(broadCastingMap.get("category"))){
+				if(category == null || (category != null && category.equals(broadCastingMap.get("category")))){
 %>					<tr>
 						<td><%= broadCastingMap.get("ch") %></td>
 						<td><%= broadCastingMap.get("name") %></td>
