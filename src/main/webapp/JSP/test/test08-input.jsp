@@ -76,7 +76,7 @@
 	<%
 			for(Map<String, Object> bookMap : list){
 				int id = (int) bookMap.get("id");
-				String img = (String)bookMap.get("image");
+				String img = (String) bookMap.get("image");
 				String title = (String) bookMap.get("title");
 	%>		
 					<tr>

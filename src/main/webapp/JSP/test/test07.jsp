@@ -52,11 +52,12 @@
 					String menu = (String)storeMap.get("menu");
 					double isPoint = 0; // 평점의 기준, 초기 설정은 전체 검색
 					if(menuString.equals(menu)){
-						if(pointString != null && Character.isDigit(pointString.charAt(0))){ 
+						if(pointString != null){ 
 							// 4 한 글자를 가지고있고 숫자인지 아닌지 판별
 							isPoint = 4;
 							
 						}
+						
 						double point = (double)storeMap.get("point");
 						String store = (String)storeMap.get("name");
 						

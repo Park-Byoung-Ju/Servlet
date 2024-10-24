@@ -69,10 +69,10 @@
 			int mapId = Integer.parseInt(bookMap.get("id").toString());
 			
 			if(id == mapId){
-				String img = bookMap.get("image").toString();
-				String title = bookMap.get("title").toString();
-				String publisher = bookMap.get("publisher").toString();
-				String author = bookMap.get("author").toString();
+				String img = (String) bookMap.get("image");
+				String title = (String) bookMap.get("title");
+				String publisher = (String) bookMap.get("publisher");
+				String author = (String) bookMap.get("author");
 			
 %>				<div style="width:400px">
 					<img class="w-100" src="<%= img %>">
