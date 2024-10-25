@@ -96,7 +96,7 @@ musicList.add(musicInfo);
 %>
 	<div class="wrap">
 		<header class="d-flex">
-			<div class="text-success col-3"><h2>Melong</h2></div>
+			<div class="col-3"><h2><a href="/JSP/test/test10-input.jsp" class="text-success">Melong</a></h2></div>
 			
 			<div class="col-9">
 				<form method="get" action="">
@@ -125,8 +125,8 @@ musicList.add(musicInfo);
 			<div class="border border-success d-flex p-3">		
 <%
 			for(Map<String, Object> info : musicList){				
-				if(title != null && (title.equals((String)info.get("title"))) || (title == null && id == (int)info.get("id"))){
-%>						<div class="col-3"><img class="w-100" src="<%= (String)info.get("thumbnail") %>"></div>
+				if((title != null && title.equals((String)info.get("title"))) || id == (int)info.get("id")){
+%>					<div class="col-3"><img class="w-100" src="<%= (String)info.get("thumbnail") %>"></div>
 					
 					<div class="col-9">
 						<div class="display-4 color-gray"><%= (String)info.get("title") %></div>

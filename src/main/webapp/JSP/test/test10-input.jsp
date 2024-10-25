@@ -147,7 +147,7 @@
 %>					
 						<tr>
 							<td><%= info.get("id") %></td>
-							<td><a class="text-primary" href="/JSP/test/test10.jsp?id=<%=(int)info.get("id")%>"><%=(String) info.get("title") %></a></td>
+							<td><a class="text-primary" href="/JSP/test/test10.jsp?id=<%= (int)info.get("id") %>"><%=(String) info.get("title") %></a></td>
 							<td><%= info.get("album") %></td>
 						</tr>
 <%				}
