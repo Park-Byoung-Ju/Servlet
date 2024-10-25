@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-<link rel="stylesheet" href="test10.css">
+<link rel="stylesheet" href="test10Main.css">
 <title>test10-input</title>
 </head>
 <body>
@@ -96,9 +96,9 @@
 %>
 	<div class="wrap">
 		<header class="d-flex">
-			<div class="text-success col-3"><h2>Melong</h2></div>
+			<div class="col-2"><h2><a href="/JSP/test/test10-input.jsp" class="text-success">Melong</a></h2></div>
 			
-			<div class="col-9">
+			<div class="col-10">
 				<form method="get" action="/JSP/test/test10.jsp">
 					<div class="input-group w-50">
 						<input class="form-control" type="text" name="title">

@@ -62,9 +62,9 @@
 
 	int id = Integer.parseInt(request.getParameter("id"));
 %>
-	<div>
-		<h2 class="text-center">도서 정보</h2>
-		<div class="d-flex justify-content-center mt-3">
+	<div>		
+		<h1 class="text-center">도서 정보</h1>	
+		<div class="d-flex justify-content-center mt-4">
 <% 		for(Map<String, Object> bookMap : list){
 			int mapId = Integer.parseInt(bookMap.get("id").toString());
 			
@@ -78,7 +78,7 @@
 					<img class="w-100" src="<%= img %>">
 				</div>
 			
-				<div>
+				<div class="ml-4">
 					<h1><%= title %></h1>
 					<div class="text-info display-2"><%= author %></div>
 					<div style="color:gray;" class="display-3"><%= publisher %></div>
@@ -86,6 +86,10 @@
 <%			}
 		}
 %>			
+		</div>
+		
+		<div class="w-75 d-flex justify-content-end mt-3">
+			<a href="/JSP/test/test08-input.jsp" class="btn bg-success text-white">도서 목록</a>
 		</div>
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

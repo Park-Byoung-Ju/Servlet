@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.wrap{
+	width:1200px;
+	margin:10px auto 0 auto;
+}
+
+.menu-item{
+	width:100px;
+}
+
+.menu-text{
+	color:black;
+	font-weight:bold;
+	cursor:pointer;
+}
