@@ -31,7 +31,6 @@ public class Ex01Controller extends HttpServlet{
 			
 			// 접속 주소, 포트, 아이디, 비밀번호
 			String url = "jdbc:mysql://localhost:3306/mega";
-			int port = 50;
 			String id = "root";
 			String pw = "root";
 			
