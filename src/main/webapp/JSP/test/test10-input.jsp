@@ -103,7 +103,7 @@
 					<div class="input-group w-50">
 						<input class="form-control" type="text" name="title">
 						<div class="input-group-append">
-							<button class="btn bg-info text-white" type="submit">검색</button>
+							<button class="btn btn-info" type="submit">검색</button>
 						</div>
 					</div>
 				</form>
@@ -111,19 +111,26 @@
 		</header>
 		
 		<nav class="mt-5">
-			<div class="d-flex justify-content-start">
+			<ul class="nav font-weight-bold">
+				<li class="nav-item"><a class="nav-link text-dark" href="#">멜롱차트</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">최신음악</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">장르음악</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">멜롱DJ</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">뮤직어워드</a></li>
+			</ul>
+			<!-- <div class="d-flex justify-content-start">
 				<div class="menu-item"><a class="menu-text">멜롱차트</a></div>
 				<div class="menu-item"><a class="menu-text">최신음악</a></div>
 				<div class="menu-item"><a class="menu-text">장르음악</a></div>
 				<div class="menu-item"><a class="menu-text">멜롱DJ</a></div>
 				<div class="menu-item"><a class="menu-text">뮤직어워드</a></div>
-			</div>
+			</div> -->
 		</nav>
 		
 		<section class="mt-3">
 			<div class="d-flex border border-success p-3">
 				<div class="col-2"><img class="w-100" src="<%= artistInfo.get("photo") %>"></div>
-				<div class="col-10">
+				<div class="ml-2">
 					<div><h3><%= (String) artistInfo.get("name") %></h3></div>
 					<div class="mt-2"><%= (String)artistInfo.get("agency") %></div>
 					<div><%= (int) artistInfo.get("debute") + "년 데뷔" %></div>
@@ -132,7 +139,7 @@
 			
 			<article>
 				<h3 class="mt-3">곡 목록</h3>
-				<table class="table text-center">
+				<table class="table table-sm text-center">
 					<thead>
 						<tr>
 							<th class="col-1">no</th>

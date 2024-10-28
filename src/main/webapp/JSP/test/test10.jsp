@@ -112,13 +112,21 @@ musicList.add(musicInfo);
 		</header>
 		
 		<nav class="mt-5">
-			<div class="d-flex justify-content-start">
+			<ul class="nav font-weight-bold">
+				<li class="nav-item"><a class="nav-link text-dark" href="#">멜롱차트</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">최신음악</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">장르음악</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">멜롱DJ</a></li>
+				<li class="nav-item"><a class="nav-link text-dark" href="#">뮤직어워드</a></li>
+			</ul>
+		
+			<!-- <div class="d-flex justify-content-start">
 				<div class="menu-item"><a class="menu-text">멜롱차트</a></div>
 				<div class="menu-item"><a class="menu-text">최신음악</a></div>
 				<div class="menu-item"><a class="menu-text">장르음악</a></div>
 				<div class="menu-item"><a class="menu-text">멜롱DJ</a></div>
 				<div class="menu-item"><a class="menu-text">뮤직어워드</a></div>
-			</div>
+			</div> -->
 		</nav>
 		
 		<section class="mt-2">
