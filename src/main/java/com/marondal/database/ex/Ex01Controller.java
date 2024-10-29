@@ -55,8 +55,10 @@ public class Ex01Controller extends HttpServlet{
 				String description = resultSet.getString("description");
 				
 				out.println("제목 : " + title + ", 가격 : " + price + "원, 설명 : " + description);
+				
+				
 			}
-			
+			statement.close();
 			/*
 			 * String query = "INSERT INTO `used_goods`\r\n" +
 			 * "(`sellerId`, `title`, `price`, `description`)\r\n" + "VALUE\r\n" +
