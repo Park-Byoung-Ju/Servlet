@@ -1,5 +1,6 @@
 package com.marondal.common;
 
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -54,6 +55,7 @@ public class MysqlService {
 			for(int i = 1; i <= columnCount; i++) {
 				columnList.add(rsmd.getColumnName(i));
 			}
+			
 			
 			List<Map<String, Object>> resultList = new ArrayList<>();
 			
