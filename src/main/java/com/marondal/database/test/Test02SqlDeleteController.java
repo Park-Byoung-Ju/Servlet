@@ -24,6 +24,8 @@ public class Test02SqlDeleteController extends HttpServlet{
 		
 		int result = mysqlService.update(query);
 		
+		mysqlService.disconnect();
+		
 		try {
 			response.sendRedirect("/db/test/test02.jsp");
 		} catch (IOException e) {

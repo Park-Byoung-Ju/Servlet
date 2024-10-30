@@ -30,6 +30,8 @@ public class Test02SqlInsertController extends HttpServlet{
 		
 		int result = mysqlService.update(query);
 		
+		mysqlService.disconnect();
+		
 		if(result == 0) {
 			response.sendRedirect("/db/test/test02-input.jsp");
 		}else {
