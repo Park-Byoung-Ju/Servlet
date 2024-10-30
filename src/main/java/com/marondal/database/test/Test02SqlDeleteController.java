@@ -1,6 +1,7 @@
 package com.marondal.database.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,9 +16,11 @@ public class Test02SqlDeleteController extends HttpServlet{
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
 		
+		response.setContentType("text/html");
+		
 		String id = request.getParameter("id");
 		
-		MysqlService mysqlService = new MysqlService();
+		MysqlService mysqlService = MysqlService.getInstance();
 		mysqlService.connect();
 		
 		String query = "DELETE FROM `bookMark` WHERE `id` = " + id + ";";
@@ -27,6 +30,9 @@ public class Test02SqlDeleteController extends HttpServlet{
 		mysqlService.disconnect();
 		
 		try {
+			PrintWriter out = response.getWriter();
+			out.write("<script>alert('삭제되었습니다');</script>");
+			
 			response.sendRedirect("/db/test/test02.jsp");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
