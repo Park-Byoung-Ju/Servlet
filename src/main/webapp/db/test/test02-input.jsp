@@ -21,8 +21,14 @@
 			</div>
 			<button class="btn btn-success mt-3" id="btn" type="submit">추가</button>
 		</form>
-		<a class="mt-3" href="/db/test/test02Created">db table 생성하기</a>
-		<a class="mt-3" href="/db/test/test02.jsp">리스트로 바로 가기</a>
+		
+		<div class="mt-3">
+			<a href="/db/test/test02Created">db table 생성하기</a>
+		</div>
+		
+		<div class="mt-2">
+			<a href="/db/test/test02.jsp">리스트로 바로 가기</a>
+		</div>
 	</div>
 	
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
