@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#wrap{
+	width:1200px;
+	margin:0 auto 0 auto;
+}
+
+.font-logo{
+	font-size:50px;
+	font-weight:bold;
+}
+
+.background-hong{
+	background-color:rgb(243, 84, 5);
+}
+
+header{
+	height:80px;
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.flex-style{
+ 	flex-flow:row wrap;
+	justify-content:space-between;
+}
+
+
+/* .imgBox{
+	
+	overflow:hidden;
+} */
+
+.imgSize{
+	width:350px;
+	height:350px;
+}
+
+
+.nickname-font{
+	color:rgb(243, 84, 5);
+}
+
+.item-box:hover{
+	background-color: yellowgreen;
+}

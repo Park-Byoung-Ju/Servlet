@@ -30,9 +30,6 @@ public class Test02SqlDeleteController extends HttpServlet{
 		mysqlService.disconnect();
 		
 		try {
-			PrintWriter out = response.getWriter();
-			out.write("<script>alert('삭제되었습니다');</script>");
-			
 			response.sendRedirect("/db/test/test02.jsp");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#wrap > div > nav > ul > li:hover{
+	background-color:blue;
+}
+
+#info{
+	font-size:40px;
+}
+
+#main{
+	width:95%;
+	margin:0 auto 0 auto;
+}
+
+.group-text{
+	height:38px;
+}
+
+#bg-url-btn{
+	background-color:rgb(210, 209, 209);;
+}
+
+option{
+	background-color:black;
+	color:white;
+}
